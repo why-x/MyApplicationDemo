@@ -389,7 +389,7 @@ public class PinchImageView extends android.support.v7.widget.AppCompatImageView
 
 
     ////////////////////////////////对外广播事件////////////////////////////////
-
+ 
     /**
      * 外部矩阵变化事件通知监听器
      */
