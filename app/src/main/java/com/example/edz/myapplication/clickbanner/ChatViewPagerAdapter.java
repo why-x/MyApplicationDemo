@@ -67,8 +67,8 @@ public class ChatViewPagerAdapter extends PagerAdapter {
             Glide.with(context)
                     .load(listData.get(position))
                     .fitCenter()
-                    .placeholder(R.mipmap.ic_launcher)
-                    .error(R.mipmap.ic_launcher)
+                    .placeholder(R.drawable.placeholder_photo)
+                    .error(R.drawable.erro_image)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(iv);
         }

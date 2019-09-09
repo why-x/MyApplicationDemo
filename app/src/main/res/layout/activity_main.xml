@@ -10,7 +10,8 @@
     <com.example.edz.myapplication.banner.Banner
         android:id="@+id/banner"
         android:layout_width="match_parent"
-        android:layout_height="250dp"></com.example.edz.myapplication.banner.Banner>
+        android:layout_height="250dp"
+        android:visibility="gone"></com.example.edz.myapplication.banner.Banner>
 
 
     <com.zhouwei.mzbanner.MZBannerView
@@ -21,4 +22,8 @@
         app:canLoop="true"
         app:open_mz_mode="false" />
 
+    <EditText
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

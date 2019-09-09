@@ -1,14 +1,19 @@
 package com.example.edz.myapplication;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private List<String> list;
     MZBannerView mMZBanner;
     private BannerViewHolder bannerViewHolder;
+    private EditText keyboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         banner = (Banner) findViewById(R.id.banner);
         mMZBanner = (MZBannerView) findViewById(R.id.mzbanner);
-
+        keyboard = findViewById(R.id.keyboard);
 
         initData();
         initBannerView();
@@ -60,6 +66,42 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                View view = getCurrentFocus();
+                hideKeyboard(ev, view, this);//调用方法判断是否需要隐藏键盘
+                break;
+
+            default:
+                break;
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+    public static void hideKeyboard(MotionEvent event, View view,
+                                    Activity activity) {
+        try {
+            if (view != null && view instanceof EditText) {
+                int[] location = {0, 0};
+                view.getLocationInWindow(location);
+                int left = location[0], top = location[1], right = left
+                        + view.getWidth(), bootom = top + view.getHeight();
+                // 判断焦点位置坐标是否在空间内，如果位置在控件外，则隐藏键盘
+                if (event.getRawX() < left || event.getRawX() > right
+                        || event.getY() < top || event.getRawY() > bootom) {
+                    // 隐藏键盘
+                    IBinder token = view.getWindowToken();
+                    InputMethodManager inputMethodManager = (InputMethodManager) activity
+                            .getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(token,
+                            InputMethodManager.HIDE_NOT_ALWAYS);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public static class BannerViewHolder implements MZViewHolder<String> {
         private ImageView mImageView;
         private JZVideoPlayerStandard videoView;
@@ -125,6 +167,8 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
 //        list.add(proxyUrl);
         list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=200&gp=0.jpg");
+        list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=20&gp=0.jpg");
+        list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=30&gp=0.jpg");
         list.add("http://ad.12306.cn/app/res/media_material/w1.jpg");
         list.add(proxyUrl2);
 

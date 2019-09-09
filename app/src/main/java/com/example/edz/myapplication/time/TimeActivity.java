@@ -22,6 +22,7 @@ public class TimeActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_time);
         findViewById(R.id.ll_date).setOnClickListener(this);
         mTvSelectedDate = findViewById(R.id.tv_selected_date);
+
         initDatePicker();
 
         findViewById(R.id.ll_time).setOnClickListener(this);

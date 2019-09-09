@@ -234,9 +234,9 @@ public class CaptureButton2 extends View {
                 captureListener.recordShort(recorded_time);//回调录制时间过短
             else
                 captureListener.recordEnd(recorded_time);  //回调录制结束
-        }
     }
 
+}
     //重制状态
     private void resetRecordAnim() {
         state = STATE_BAN;
