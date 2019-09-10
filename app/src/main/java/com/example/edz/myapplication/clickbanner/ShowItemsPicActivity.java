@@ -76,8 +76,6 @@ public class ShowItemsPicActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         Toast.makeText(context, "下载图片", Toast.LENGTH_SHORT).show();
                         DonwloadSaveImg.donwloadImg(ShowItemsPicActivity.this, url);//iPath
-
-//                        new DownloadImage(ShowItemsPicActivity.this).execute(OkHttpClientManager.photoip + url);
                     }
                 });
             }
@@ -113,6 +111,7 @@ public class ShowItemsPicActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        //暂停jz播放
         jzVideoPlayerStandard.releaseAllVideos();
     }
 }

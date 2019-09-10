@@ -55,7 +55,6 @@ public class ChatViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         container.addView(views.get(position));
         View view = views.get(position);
-
         PinchImageView iv = (PinchImageView) view.findViewById(R.id.chat_show_load_image_item_im);
         JZVideoPlayerStandard jz = (JZVideoPlayerStandard) view.findViewById(R.id.jz);
         if (listData.get(position).endsWith("mp4")) {
@@ -63,6 +62,7 @@ public class ChatViewPagerAdapter extends PagerAdapter {
             jz.setUp(listData.get(position), JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "");
         } else {
             jz.setVisibility(View.GONE);
+            //暂停jz播放
             jz.releaseAllVideos();
             Glide.with(context)
                     .load(listData.get(position))

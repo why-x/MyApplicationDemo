@@ -76,18 +76,23 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoTitleBarForVideo"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".time.TimeActivity" >
-
-
-        </activity>
-        <activity android:name=".table.TableActivity"></activity>
+        <activity android:name=".time.TimeActivity" />
+        <activity android:name=".table.TableActivity" />
         <activity android:name=".liandong.LianDActivity" />
         <activity
             android:name=".ScrollListActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
         <activity android:name=".clickbanner.ShowItemsPicActivity" />
-        <activity android:name=".clickbanner.twoclickbanner.ImageBigActivity"></activity>
+        <activity android:name=".clickbanner.twoclickbanner.ImageBigActivity" />
+        <activity android:name=".lockview.LockActivity"></activity>
+        <activity android:name=".dianzan.DianActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -13,4 +13,8 @@
     <color name="current_time_bg">#FFFFFF</color>
     <color name="current_time_text">#666666</color>
     <color name="selected_time_text">#57C5E8</color>
+    <color name="gold">#9d9f9f</color>
+    <color name="brown">#ae8d0b</color>
+    <color name="red">#fc0a0a</color>
+    <color name="blue">#b6fff8</color>
 </resources>
