@@ -1,7 +1,9 @@
 package com.example.edz.myapplication;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.IBinder;
@@ -12,7 +14,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -22,7 +23,6 @@ import com.bumptech.glide.Glide;
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.example.edz.myapplication.banner.Banner;
 import com.example.edz.myapplication.clickbanner.ShowItemsPicActivity;
-import com.example.edz.myapplication.clickbanner.twoclickbanner.ImageBigActivity;
 import com.zhouwei.mzbanner.MZBannerView;
 import com.zhouwei.mzbanner.holder.MZHolderCreator;
 import com.zhouwei.mzbanner.holder.MZViewHolder;
@@ -31,7 +31,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.jzvd.JZMediaManager;
 import cn.jzvd.JZVideoPlayerStandard;
 
 /**
@@ -66,6 +65,28 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void download(View view) {
+        showUpgradeDialog("http://ad.12306.cn/app/res/apk/advert.apk");
+    }
+    private void showUpgradeDialog(final String url) {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("升级提醒");
+        dialog.setMessage("存在最新版本，是否更新？");
+        dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent();
+                intent.setAction("android.intent.action.VIEW");
+                Uri apk_url = Uri.parse(url);
+                intent.setData(apk_url);
+                startActivity(intent);//打开浏览器
+
+            }
+        });
+        dialog.setNegativeButton("取消", null);
+        dialog.show();
+    }
+
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
@@ -79,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.dispatchTouchEvent(ev);
     }
+
     public static void hideKeyboard(MotionEvent event, View view,
                                     Activity activity) {
         try {
@@ -102,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     public static class BannerViewHolder implements MZViewHolder<String> {
         private ImageView mImageView;
         private JZVideoPlayerStandard videoView;

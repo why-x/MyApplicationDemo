@@ -12,6 +12,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Button
+            android:onClick="download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="OnClick" />
 
         <com.example.edz.myapplication.banner.Banner
             android:id="@+id/banner"

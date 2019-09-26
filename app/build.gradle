@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+//java中支持lambda
+apply plugin: 'me.tatarka.retrolambda'
+
 
 android {
     compileSdkVersion 29
@@ -15,6 +18,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
     }
 }
 
@@ -45,14 +52,23 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.9'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
 
-//手势锁
+    //手势锁
     compile 'com.andrognito.patternlockview:patternlockview:1.0.0'
     // Optional, for RxJava2 adapter
     compile 'com.andrognito.patternlockview:patternlockview-reactive:1.0.0'
-//手势放大
+    //手势放大
     implementation 'com.github.chrisbanes:PhotoView:2.0.0'
 
 
     compile 'com.clock.scratch:Scratch:1.0.0'
-
+    //版本更新
+    compile 'com.qianwen:update-app:3.5.2'
+    //在线更新
+    compile 'com.allenliu.versionchecklib:library:2.2.0'
+    //拼音
+    implementation 'com.belerweb:pinyin4j:2.5.1'
+    //悬浮窗
+    implementation 'com.github.wangfeng19930909:DragFloatingActionButton:1.0.1'
+    //微信通讯录
+    compile 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
 }

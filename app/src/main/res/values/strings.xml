@@ -12,7 +12,8 @@
     <string name="current_date">当前日期</string>
     <string name="select_time">选择时间</string>
     <string name="current_time">当前时间</string>
+    <string name="updatecontent">1.VersionCheckLib V2版震撼来袭\n2.链式编程，调用简单\n3.强大的自定义功能，一行代码轻松搞定\n4.欢迎Star和Issue\n5.github:<a href='http://github.com/alexliusheng'>http://github.com/alexliusheng</a></string>
+    <string name="custom_content_text">自定义通知栏进度:%d%%/100%%</string>
+    <string name="update_title">VersionCheckLib V2版震撼来袭</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

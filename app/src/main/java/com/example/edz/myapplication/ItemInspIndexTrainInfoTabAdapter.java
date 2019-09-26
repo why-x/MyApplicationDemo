@@ -32,14 +32,13 @@ public class ItemInspIndexTrainInfoTabAdapter extends RecyclerView.Adapter<ItemI
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-//        holder.mediatype.setText( objects.get(position));
+        holder.mediatype.setText(position + "");
     }
-
 
 
     @Override
     public int getItemCount() {
-        return objects.size()+30;
+        return objects.size() + 30;
     }
 
 

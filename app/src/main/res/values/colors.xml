@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--<color name="colorAccent">#D81B60</color>-->
     <color name="date_picker_bg">#FFFFFF</color>
     <color name="date_picker_divider">#11112233</color>
     <color name="date_picker_text_light">#59B29C</color>
@@ -17,4 +18,10 @@
     <color name="brown">#ae8d0b</color>
     <color name="red">#fc0a0a</color>
     <color name="blue">#b6fff8</color>
+
+    <color name="bg_color_side_bar_touched">#99C60000</color>
+    <color name="font_color_selected">#ffffffff</color>
+    <color name="font_color_name">#336598</color>
+    <color name="font_color_listview_bigletter_bg">#E0E0E0</color>
+    <color name="font_color_sidebar_bigletter">#454545</color>
 </resources>

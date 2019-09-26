@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.edz.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- if you want to load images from the internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -37,13 +43,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".camera.CameraActivity" />
         <!-- &lt;!&ndash; 提供文件访问，android7.0之后访问文件目录需要 &ndash;&gt; -->
         <!-- <provider -->
@@ -85,8 +85,13 @@
             android:screenOrientation="portrait" />
         <activity android:name=".clickbanner.ShowItemsPicActivity" />
         <activity android:name=".clickbanner.twoclickbanner.ImageBigActivity" />
-        <activity android:name=".lockview.LockActivity"></activity>
-        <activity android:name=".dianzan.DianActivity">
+        <activity android:name=".lockview.LockActivity" />
+        <activity android:name=".dianzan.DianActivity" />
+        <activity android:name=".versionupdate.JavaDemoActivity" />
+        <activity android:name=".WXpeople.WXPeopleActivity">
+
+        </activity>
+        <activity android:name=".WXpeople.wx.WeChatActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
