@@ -43,7 +43,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+
+        </activity>
         <activity android:name=".camera.CameraActivity" />
         <!-- &lt;!&ndash; 提供文件访问，android7.0之后访问文件目录需要 &ndash;&gt; -->
         <!-- <provider -->
@@ -88,10 +90,9 @@
         <activity android:name=".lockview.LockActivity" />
         <activity android:name=".dianzan.DianActivity" />
         <activity android:name=".versionupdate.JavaDemoActivity" />
-        <activity android:name=".WXpeople.WXPeopleActivity">
-
-        </activity>
-        <activity android:name=".WXpeople.wx.WeChatActivity">
+        <activity android:name=".WXpeople.WXPeopleActivity"></activity>
+        <activity android:name=".WXpeople.wx.WeChatActivity"></activity>
+        <activity android:name=".验证码.YanZhengmaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

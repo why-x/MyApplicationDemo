@@ -189,10 +189,13 @@ public class MainActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
 //        list.add(proxyUrl);
-        list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=200&gp=0.jpg");
-        list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=20&gp=0.jpg");
-        list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=30&gp=0.jpg");
-        list.add("http://ad.12306.cn/app/res/media_material/w1.jpg");
+//        list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=200&gp=0.jpg");
+//        list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=20&gp=0.jpg");
+//        list.add("http://img1.imgtn.bdimg.com/it/u=4194723123,4160931506&fm=30&gp=0.jpg");
+//        list.add("http://ad.12306.cn/app/res/media_material/w1.jpg");
+        list.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3936733252,1496860707&fm=26&gp=0.jpg");
+        list.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3936733252,1496860707&fm=26&gp=0.jpg");
+        list.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3936733252,1496860707&fm=26&gp=0.jpg");
         list.add(proxyUrl2);
 
     }
