@@ -2,7 +2,9 @@ package com.example.edz.myapplication.验证码;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.example.edz.myapplication.R;
 import com.example.edz.myapplication.验证码.PhoneCode;
@@ -17,6 +19,7 @@ public class YanZhengmaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yan_zhengma);
+         TextView tv_brief;
 
 
 

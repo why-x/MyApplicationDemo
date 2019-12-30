@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,9 +14,9 @@
         android:orientation="vertical">
 
         <Button
-            android:onClick="download"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="download"
             tools:ignore="OnClick" />
 
         <com.example.edz.myapplication.banner.Banner
@@ -43,6 +44,6 @@
             android:id="@+id/keyboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
     </LinearLayout>
-</ScrollView>
+
+</LinearLayout>

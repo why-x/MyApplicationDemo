@@ -70,5 +70,12 @@ dependencies {
     //悬浮窗
     implementation 'com.github.wangfeng19930909:DragFloatingActionButton:1.0.1'
     //微信通讯录
-    compile 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
+    implementation 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
+    //饼图
+//    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+//webview框架
+//    implementation 'com.just.agentweb:agentweb:4.0.2'
+    api 'com.just.agentweb:agentweb:4.1.2' // (必选)
+    api 'com.just.agentweb:filechooser:4.1.2'// (可选)
+    api 'com.download.library:Downloader:4.1.2'// (可选)
 }

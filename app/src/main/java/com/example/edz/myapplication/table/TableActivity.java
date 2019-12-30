@@ -7,6 +7,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 
@@ -23,12 +26,20 @@ public class TableActivity extends FragmentActivity {
     private ViewPager viewPager_shouye;
     private List<String> strings = new ArrayList<String>();;
     private List<Fragment> fragments = new ArrayList<Fragment>();;
+    private RecyclerView rcDeclare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
         initdate();
+        rcDeclare = findViewById(R.id.rc_declare);
+        List<Object> declarelist = new ArrayList<>();
+        DeclareAdapter declareAdapter = new DeclareAdapter(this, declarelist);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        rcDeclare.setLayoutManager(linearLayoutManager);
+        rcDeclare.setAdapter(declareAdapter);
         initView();
     }
     private void initView(){
@@ -55,7 +66,6 @@ public class TableActivity extends FragmentActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 Toast.makeText(TableActivity.this,"3333",Toast.LENGTH_SHORT).show();
-
             }
         });
     }

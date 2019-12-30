@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/table_shape"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="初次发证日期：" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_shape"
+                android:padding="8dp"
+
+                android:text="	R20170383" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/table_shape"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="委托人名称：" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_shape"
+                android:padding="8dp"
+                android:text="西门子（中国）有限公司" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/table_shape"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="制造地址：" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/table_shape"
+                android:padding="8dp"
+                android:text="场所1：天津市新技术产业园区华苑产业区（环外）海泰创新五路1号（除设计、销售的全部过程）
+场所2：Vogelweiher street. 1-15, 90441 Nuremberg纽伦堡, Germany（设计、部分组装过程）
+场所3：北京市朝阳区望京中环南路七号（销售）
+场所4：Duisburger Str.145 47829 Krefeld克利菲尔德,Germany.（设计、部分组装过程）" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/table_shape"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="规格型号：" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/table_shape"
+                android:padding="8dp"
+                android:text="单辅助变流器A2V00001312035(A2V00001361964)图号Drawing Nr.: A6Z00000649872；单辅助变流器A2V00001890976 (A5E02586281)图号Drawing Nr.: A5E02586281E；单辅助变流器A2V00002022323 (A5E03358315)图号Drawing Nr.: A5E03358315B；双辅助变流器A2V00001312037(A2V00001361965)图号Drawing Nr.: A6Z00000649811；双辅助变流器A2V00001890977 (A5E02586268)图号Drawing Nr.: A5E02586268E；双辅助变流器A2V00002022325 (A5E03360419)图号Drawing Nr.: A5E03360419B" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

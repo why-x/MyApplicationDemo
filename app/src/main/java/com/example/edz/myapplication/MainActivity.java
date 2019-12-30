@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,6 +18,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -68,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
     public void download(View view) {
         showUpgradeDialog("http://ad.12306.cn/app/res/apk/advert.apk");
     }
+
     private void showUpgradeDialog(final String url) {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("升级提醒");
@@ -164,8 +168,6 @@ public class MainActivity extends AppCompatActivity {
 //                        intent.putStringArrayListExtra("imageUrls", mlist);
 //                        intent.putExtra("position", position);
 //                        context.startActivity(intent);
-
-
                     }
                 });
             }
