@@ -45,7 +45,6 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"></uses-permission>
 
 
-
     <application
         android:name=".MApplication"
         android:allowBackup="true"
@@ -54,7 +53,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".camera.CameraActivity" />
         <!-- &lt;!&ndash; 提供文件访问，android7.0之后访问文件目录需要 &ndash;&gt; -->
         <!-- <provider -->
@@ -105,13 +110,7 @@
         <activity android:name=".WXpeople.wx.WeChatActivity" />
         <activity android:name=".验证码.YanZhengmaActivity" />
         <activity android:name=".chart.PieChartActivity" />
-        <activity android:name=".webview.WebActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".webview.WebActivity"></activity>
     </application>
 
 </manifest>
